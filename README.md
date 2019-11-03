@@ -4,8 +4,7 @@ Four Cards Game... this is based on a very old game played in Spain "Cuatro Cart
 
 If you love this content and want we can generate more, you can support us:
 
-[![paypal](https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com
-/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RC5F8STDA6AXE)
+[![paypal](https://www.paypalobjects.com/en_US/GB/i/btn/btn_donateCC_LG.gif)](https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&hosted_button_id=RC5F8STDA6AXE)
 
 ## Getting Started
 
@@ -31,6 +30,6 @@ For both terminals and following the instructions.
 
 A sample about how to play:
 
-[![Playing Four Cards](playing_four_cards.gif)](playing_four_cards.gif)
+[![Playing Four Cards](http://g.recordit.co/Btwzzq0SE8.gif)](http://g.recordit.co/Btwzzq0SE8.gif)
 
 Enjoy!
