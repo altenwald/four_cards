@@ -23,7 +23,7 @@ iex --sname fourcards2@localhost --cookie fourcards --remsh fourcards@localhost
 At this point both consoles are connected to the same node in different processes so, you can run:
 
 ```
-FourCards.start
+FourCardsConsole.start
 ```
 
 For both terminals and following the instructions.
