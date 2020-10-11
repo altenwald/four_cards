@@ -1,0 +1,192 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 87 140">
+  <rect width="87" height="140" rx="6" ry="6" fill="#fff"/>
+  <path fill="#0065b7" d="M27 120.4l-3 3.4-3.1-3.4v-27H27v27z"/>
+  <path fill="#004da1" d="M27 120.4l-3 3.4-.1-30.4H27v27z"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M27 120.4l-3 3.4-3.1-3.4v-27H27v27z"/>
+  <path fill="#0065b7" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M24 123.8V93.5"/>
+  <path fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M23.99 93.75l2.79 2.87-2.84 2.76-2.79-2.87z"/>
+  <path d="M24 92.66l2.8 2.86-2.84 2.77-2.8-2.87z"/>
+  <path d="M26.8 88.1c0 4.8-1.4 7.9-2.9 7.8s-2.9-3-2.8-7.9a17 17 0 0 1 3-8.8 16.7 16.7 0 0 1 2.7 8.9z" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M21.2 90.3c.6-1.1 1.3-1.7 3.1-3.2a6.8 6.8 0 0 0 2-2.7m-.7-2.3a7.7 7.7 0 0 1-1.8 2.1 21.6 21.6 0 0 0-2.6 2.5m.4 6.6a16.3 16.3 0 0 1 3.3-3.4 8 8 0 0 0 1.9-2.4" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M26.3 84.4a6.8 6.8 0 0 1-2 2.7c-1.8 1.5-2.5 2.1-3.1 3.2m1.2 5.2a14.5 14.5 0 0 1 2.8-2.7l1.3-1.5m.3-3.8a8 8 0 0 1-1.9 2.4 16.3 16.3 0 0 0-3.3 3.4" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="28.6" cy="93.8" r="3.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="28.6" cy="93.8" r="2.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="28.6" cy="93.8" r="1.3" fill="#d09b07"/>
+  <circle cx="19.4" cy="93.7" r="3.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="19.4" cy="93.7" r="2.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="19.4" cy="93.7" r="1.3" fill="#d09b07"/>
+  <ellipse cx="24" cy="78.2" rx="1.4" ry=".9" transform="rotate(-89.2 24.06 78.23)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <ellipse cx="22.2" cy="79.9" rx=".9" ry="1.4" transform="rotate(-89.2 22.21 79.9)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <ellipse cx="25.8" cy="79.9" rx=".9" ry="1.4" transform="rotate(-89.4 25.61 79.83)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="24" cy="80" r="1" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M24 79.4h-.4a.7.7 0 0 1 .6.7.5.5 0 0 1-.3.5h.1c.3 0 .7-.3.7-.6a.7.7 0 0 0-.7-.6z" fill="#d09b07"/>
+  <circle cx="23.9" cy="90.9" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="23.9" cy="90.9" r="1"/>
+  <circle cx="21.2" cy="93.7" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="21.2" cy="93.7" r="1"/>
+  <circle cx="26.9" cy="93.7" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="26.9" cy="93.7" r="1"/>
+  <circle cx="23.9" cy="93.7" r="2.7" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path fill="#0065b7" d="M46.5 120.4l-3 3.4-3.1-3.4v-27h6.1v27z"/>
+  <path fill="#004da1" d="M46.5 120.4l-3 3.4-.1-30.4h3.1v27z"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M46.5 120.4l-3 3.4-3.1-3.4v-27h6.1v27z"/>
+  <path fill="#0065b7" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M43.5 123.8V93.5"/>
+  <path fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M43.48 93.73l2.8 2.87-2.85 2.76-2.78-2.87z"/>
+  <path d="M43.5 92.64l2.79 2.86-2.84 2.77-2.79-2.87z"/>
+  <path d="M46.3 88.1c0 4.8-1.4 7.9-2.9 7.8s-2.9-3-2.8-7.9a17 17 0 0 1 3-8.8 16.7 16.7 0 0 1 2.7 8.9z" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M40.7 90.3c.6-1.1 1.3-1.7 3.1-3.2a6.8 6.8 0 0 0 2-2.7m-.7-2.3a7.7 7.7 0 0 1-1.8 2.1 21.6 21.6 0 0 0-2.6 2.5m.4 6.6a16.3 16.3 0 0 1 3.3-3.4 8 8 0 0 0 1.9-2.4" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M45.8 84.4a6.8 6.8 0 0 1-2 2.7c-1.8 1.5-2.5 2.1-3.1 3.2m1.2 5.2a14.5 14.5 0 0 1 2.8-2.7l1.3-1.5m.3-3.8a8 8 0 0 1-1.9 2.4 16.3 16.3 0 0 0-3.3 3.4" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="48.1" cy="93.8" r="3.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="48.1" cy="93.8" r="2.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="48.1" cy="93.8" r="1.3" fill="#d09b07"/>
+  <circle cx="38.9" cy="93.7" r="3.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="38.9" cy="93.7" r="2.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="38.9" cy="93.7" r="1.3" fill="#d09b07"/>
+  <ellipse cx="43.5" cy="78.2" rx="1.4" ry=".9" transform="rotate(-89.2 43.55 78.25)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <ellipse cx="41.7" cy="79.9" rx=".9" ry="1.4" transform="rotate(-89.2 41.7 79.92)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <ellipse cx="45.3" cy="79.9" rx=".9" ry="1.4" transform="rotate(-89.2 45.32 79.9)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="43.5" cy="80" r="1" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M43.5 79.4h-.4a.7.7 0 0 1 .6.7.5.5 0 0 1-.3.5h.1c.3 0 .7-.3.7-.6a.7.7 0 0 0-.7-.6z" fill="#d09b07"/>
+  <circle cx="43.4" cy="90.9" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="43.4" cy="90.9" r="1"/>
+  <circle cx="40.7" cy="93.7" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="40.7" cy="93.7" r="1"/>
+  <circle cx="46.4" cy="93.7" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="46.4" cy="93.7" r="1"/>
+  <circle cx="43.4" cy="93.7" r="2.7" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path fill="#0065b7" d="M27.1 19.6L24 16.2l-3 3.4v27h6.1v-27z"/>
+  <path fill="#004da1" d="M27.1 19.6L24 16.2v30.4h3.1v-27z"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M27.1 19.6L24 16.2l-3 3.4v27h6.1v-27z"/>
+  <path fill="#0065b7" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M24 16.2v30.3"/>
+  <path fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M24.04 46.22l-2.78-2.86 2.83-2.76 2.8 2.86z"/>
+  <path d="M24.03 47.36l-2.79-2.87 2.84-2.76 2.8 2.87z"/>
+  <path d="M21.1 51.9c.1-4.8 1.4-7.9 3-7.8s2.8 3 2.7 7.9a16.4 16.4 0 0 1-2.9 8.8 16.3 16.3 0 0 1-2.8-8.9z" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M26.8 49.7a13.5 13.5 0 0 1-3.2 3.2 8 8 0 0 0-2 2.7m.8 2.3a7.1 7.1 0 0 1 1.7-2.1c1.3-1.2 2.1-1.8 2.7-2.5m-.5-6.6c-.6 1.1-1.4 1.7-3.2 3.4a6.6 6.6 0 0 0-1.9 2.4" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M21.6 55.6a8 8 0 0 1 2-2.7 13.5 13.5 0 0 0 3.2-3.2m-1.2-5.2a20.5 20.5 0 0 1-2.9 2.7l-1.3 1.5m-.2 3.8a6.6 6.6 0 0 1 1.9-2.4c1.8-1.7 2.6-2.3 3.2-3.4" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="19.4" cy="46.2" r="3.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="19.4" cy="46.2" r="2.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="19.4" cy="46.2" r="1.3" fill="#d09b07"/>
+  <circle cx="28.6" cy="46.3" r="3.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="28.6" cy="46.3" r="2.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="28.6" cy="46.3" r="1.3" fill="#d09b07"/>
+  <ellipse cx="23.9" cy="61.8" rx="1.4" ry=".9" transform="rotate(-89.2 23.9 61.77)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <ellipse cx="25.7" cy="60.1" rx=".9" ry="1.4" transform="rotate(-89.2 25.75 60.1)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <ellipse cx="22.1" cy="60.1" rx=".9" ry="1.4" transform="rotate(-89.2 22.17 60.07)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="24" cy="60" r="1" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M23.9 60.6h.5c-.4 0-.6-.3-.6-.7a.8.8 0 0 1 .2-.5.7.7 0 0 0-.1 1.3z" fill="#d09b07"/>
+  <circle cx="24.1" cy="49.1" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="24.1" cy="49.1" r="1"/>
+  <circle cx="26.8" cy="46.3" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="26.8" cy="46.3" r="1"/>
+  <circle cx="21.1" cy="46.3" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="21.1" cy="46.3" r="1"/>
+  <circle cx="24.1" cy="46.3" r="2.7" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path fill="#0065b7" d="M46.6 19.6l-3.1-3.4-3 3.4v27h6.1v-27z"/>
+  <path fill="#004da1" d="M46.6 19.6l-3.1-3.4v30.4h3.1v-27z"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M46.6 19.6l-3.1-3.4-3 3.4v27h6.1v-27z"/>
+  <path fill="#0065b7" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M43.5 16.2v30.3"/>
+  <path fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M43.55 46.24l-2.79-2.86 2.84-2.76 2.79 2.86z"/>
+  <path d="M43.54 47.28l-2.79-2.87 2.84-2.76 2.79 2.87z"/>
+  <path d="M40.6 51.9c.1-4.8 1.4-7.9 3-7.8s2.8 3 2.7 7.9a16.4 16.4 0 0 1-2.9 8.8 16.3 16.3 0 0 1-2.8-8.9z" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M46.3 49.7a13.5 13.5 0 0 1-3.2 3.2 8 8 0 0 0-2 2.7m.8 2.3a7.1 7.1 0 0 1 1.7-2.1c1.3-1.2 2.1-1.8 2.7-2.5m-.5-6.6c-.6 1.1-1.4 1.7-3.2 3.4a6.6 6.6 0 0 0-1.9 2.4" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M41.1 55.6a8 8 0 0 1 2-2.7 13.5 13.5 0 0 0 3.2-3.2m-1.2-5.2a20.5 20.5 0 0 1-2.9 2.7l-1.3 1.5m-.2 3.8a6.6 6.6 0 0 1 1.9-2.4c1.8-1.7 2.6-2.3 3.2-3.4" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="38.9" cy="46.2" r="3.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="38.9" cy="46.2" r="2.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="38.9" cy="46.2" r="1.3" fill="#d09b07"/>
+  <circle cx="48.1" cy="46.3" r="3.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="48.1" cy="46.3" r="2.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="48.1" cy="46.3" r="1.3" fill="#d09b07"/>
+  <ellipse cx="43.4" cy="61.8" rx="1.4" ry=".9" transform="rotate(-89.2 43.43 61.73)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <ellipse cx="45.2" cy="60.1" rx=".9" ry="1.4" transform="rotate(-89.2 45.23 60.1)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <ellipse cx="41.6" cy="60.1" rx=".9" ry="1.4" transform="rotate(-89.2 41.66 60.08)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="43.5" cy="60" r="1" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M43.4 60.6h.5c-.4 0-.6-.3-.6-.7a.8.8 0 0 1 .2-.5.7.7 0 1 0-.1 1.3z" fill="#d09b07"/>
+  <circle cx="43.6" cy="49.1" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="43.6" cy="49.1" r="1"/>
+  <circle cx="46.3" cy="46.3" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="46.3" cy="46.3" r="1"/>
+  <circle cx="40.6" cy="46.3" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="40.6" cy="46.3" r="1"/>
+  <circle cx="43.6" cy="46.3" r="2.7" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path fill="#0065b7" d="M66 120.4l-3 3.4-3.1-3.4v-27H66v27z"/>
+  <path fill="#004da1" d="M66 120.4l-3 3.4-.1-30.4H66v27z"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M66 120.4l-3 3.4-3.1-3.4v-27H66v27z"/>
+  <path fill="#0065b7" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M63 123.8V93.5"/>
+  <path fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M62.98 93.71l2.79 2.87-2.84 2.76-2.79-2.87z"/>
+  <path d="M63 92.72l2.78 2.86-2.83 2.76-2.8-2.86z"/>
+  <path d="M65.8 88.1c0 4.8-1.4 7.9-2.9 7.8s-2.9-3-2.8-7.9a17 17 0 0 1 3-8.8 16.7 16.7 0 0 1 2.7 8.9z" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M60.2 90.3c.6-1.1 1.3-1.7 3.1-3.2a6.8 6.8 0 0 0 2-2.7m-.7-2.3a7.7 7.7 0 0 1-1.8 2.1 21.6 21.6 0 0 0-2.6 2.5m.4 6.6a16.3 16.3 0 0 1 3.3-3.4 8 8 0 0 0 1.9-2.4" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M65.3 84.4a6.8 6.8 0 0 1-2 2.7c-1.8 1.5-2.5 2.1-3.1 3.2m1.2 5.2a14.5 14.5 0 0 1 2.8-2.7l1.3-1.5m.3-3.8a8 8 0 0 1-1.9 2.4 16.3 16.3 0 0 0-3.3 3.4" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="67.6" cy="93.8" r="3.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="67.6" cy="93.8" r="2.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="67.6" cy="93.8" r="1.3" fill="#d09b07"/>
+  <circle cx="58.4" cy="93.7" r="3.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="58.4" cy="93.7" r="2.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="58.4" cy="93.7" r="1.3" fill="#d09b07"/>
+  <ellipse cx="63" cy="78.2" rx="1.4" ry=".9" transform="rotate(-89.2 62.98 78.21)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <ellipse cx="61.2" cy="79.9" rx=".9" ry="1.4" transform="rotate(-89.2 61.18 79.94)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <ellipse cx="64.8" cy="79.9" rx=".9" ry="1.4" transform="rotate(-89.2 64.81 79.91)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="63" cy="80" r="1" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M63 79.4h-.4a.7.7 0 0 1 .6.7.5.5 0 0 1-.3.5h.1c.3 0 .7-.3.7-.6a.7.7 0 0 0-.7-.6z" fill="#d09b07"/>
+  <circle cx="62.9" cy="90.9" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="62.9" cy="90.9" r="1"/>
+  <circle cx="60.2" cy="93.7" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="60.2" cy="93.7" r="1"/>
+  <circle cx="65.9" cy="93.7" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="65.9" cy="93.7" r="1"/>
+  <circle cx="62.9" cy="93.7" r="2.7" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path fill="#0065b7" d="M66.1 19.6L63 16.2l-3 3.4v27h6.1v-27z"/>
+  <path fill="#004da1" d="M66.1 19.6L63 16.2v30.4h3.1v-27z"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M66.1 19.6L63 16.2l-3 3.4v27h6.1v-27z"/>
+  <path fill="#0065b7" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M63 16.2v30.3"/>
+  <path fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M63.06 46.26l-2.8-2.86 2.85-2.76 2.78 2.86z"/>
+  <path d="M63.04 47.3l-2.79-2.87 2.84-2.76 2.8 2.87z"/>
+  <path d="M60.1 51.9c.1-4.8 1.4-7.9 3-7.8s2.8 3 2.7 7.9a16.4 16.4 0 0 1-2.9 8.8 16.3 16.3 0 0 1-2.8-8.9z" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M65.8 49.7a13.5 13.5 0 0 1-3.2 3.2 8 8 0 0 0-2 2.7m.8 2.3a7.1 7.1 0 0 1 1.7-2.1c1.3-1.2 2.1-1.8 2.7-2.5m-.5-6.6c-.6 1.1-1.4 1.7-3.2 3.4a6.6 6.6 0 0 0-1.9 2.4" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M60.6 55.6a8 8 0 0 1 2-2.7 13.5 13.5 0 0 0 3.2-3.2m-1.2-5.2a20.5 20.5 0 0 1-2.9 2.7l-1.3 1.5m-.2 3.8a6.6 6.6 0 0 1 1.9-2.4c1.8-1.7 2.6-2.3 3.2-3.4" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="58.4" cy="46.2" r="3.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="58.4" cy="46.2" r="2.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="58.4" cy="46.2" r="1.3" fill="#d09b07"/>
+  <circle cx="67.6" cy="46.3" r="3.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="67.6" cy="46.3" r="2.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="67.6" cy="46.3" r="1.3" fill="#d09b07"/>
+  <ellipse cx="62.9" cy="61.8" rx="1.4" ry=".9" transform="rotate(-89.2 62.92 61.75)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <ellipse cx="64.7" cy="60.1" rx=".9" ry="1.4" transform="rotate(-89.2 64.77 60.07)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <ellipse cx="61.1" cy="60.1" rx=".9" ry="1.4" transform="rotate(-89.2 61.15 60.1)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="63" cy="60" r="1" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M62.9 60.6h.5c-.4 0-.6-.3-.6-.7a.8.8 0 0 1 .2-.5.7.7 0 1 0-.1 1.3z" fill="#d09b07"/>
+  <circle cx="63.1" cy="49.1" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="63.1" cy="49.1" r="1"/>
+  <circle cx="65.8" cy="46.3" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="65.8" cy="46.3" r="1"/>
+  <circle cx="60.1" cy="46.3" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="60.1" cy="46.3" r="1"/>
+  <circle cx="63.1" cy="46.3" r="2.7" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path fill="#0065b7" d="M64.4 73.1l3.4-3-3.4-3.1-27 .1v6h27z"/>
+  <path fill="#004da1" d="M64.4 73.1l3.4-3H37.4v3h27z"/>
+  <path fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M64.4 73.1l3.4-3-3.4-3.1-27 .1v6h27z"/>
+  <path fill="#0065b7" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M67.8 70.1H37.5"/>
+  <path fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4" d="M37.75 70.01l2.87-2.79 2.76 2.84-2.87 2.79z"/>
+  <path d="M36.66 70.08l2.87-2.8 2.76 2.85-2.87 2.79z"/>
+  <path d="M32.1 67.2c4.9 0 7.9 1.3 7.9 2.9s-3.1 2.9-8 2.8a16.9 16.9 0 0 1-8.7-3 16.6 16.6 0 0 1 8.8-2.7z" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M34.4 72.8c-1.1-.6-1.7-1.4-3.3-3.1a5.7 5.7 0 0 0-2.7-2m-2.2.7a6.9 6.9 0 0 1 2 1.7 23.3 23.3 0 0 0 2.6 2.7m6.6-.4c-1.2-.7-1.8-1.4-3.4-3.3a8.1 8.1 0 0 0-2.5-1.9" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M28.4 67.7a5.7 5.7 0 0 1 2.7 2c1.6 1.7 2.2 2.5 3.3 3.1m5.2-1.2a17.9 17.9 0 0 1-2.8-2.8l-1.4-1.4m-3.9-.2a8.1 8.1 0 0 1 2.5 1.9c1.6 1.9 2.2 2.6 3.4 3.3" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="37.9" cy="65.5" r="3.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="37.9" cy="65.5" r="2.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="37.9" cy="65.5" r="1.3" fill="#d09b07"/>
+  <circle cx="37.7" cy="74.7" r="3.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="37.7" cy="74.7" r="2.3" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="37.7" cy="74.7" r="1.3" fill="#d09b07"/>
+  <ellipse cx="22.3" cy="70" rx=".9" ry="1.4" transform="rotate(-89.2 22.3 69.99)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <ellipse cx="24" cy="71.8" rx="1.4" ry=".9" transform="rotate(-89.2 24.02 71.79)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <ellipse cx="24" cy="68.2" rx="1.4" ry=".9" transform="rotate(-89.2 24 68.16)" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="24.1" cy="70" r="1" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <path d="M23.4 70c0 .1.1.3.1.4a.9.9 0 0 1 .7-.6.6.6 0 0 1 .6.3.7.7 0 1 0-1.4 0z" fill="#d09b07"/>
+  <circle cx="35" cy="70.1" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="35" cy="70.1" r="1"/>
+  <circle cx="37.7" cy="72.8" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="37.7" cy="72.8" r="1"/>
+  <circle cx="37.7" cy="67.2" r="1.6" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+  <circle cx="37.7" cy="67.2" r="1"/>
+  <circle cx="37.7" cy="70.1" r="2.7" fill="#febf10" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width=".4"/>
+</svg>

@@ -11,9 +11,7 @@ defmodule FourCardsGame.Game do
   @max_game_time 21_600_000
   @max_ended_time 1_800_000
 
-  @game_sup_registry FourCardsGame.Supervisor.Registry
   @game_registry FourCardsGame.Game.Registry
-  @game_supervisor FourCardsGame.Games
 
   alias FourCardsGame.{EventManager, Game, Player}
 
@@ -39,25 +37,8 @@ defmodule FourCardsGame.Game do
     {:via, Registry, {@game_registry, game}}
   end
 
-  defp sup_via(game) do
-    {:via, Registry, {@game_sup_registry, game}}
-  end
-
   def start_link(name) do
     GenStateMachine.start_link(__MODULE__, [name], name: via(name))
-  end
-
-  def start(game) do
-    children = [
-      {Game, game},
-      {EventManager, game}
-    ]
-    opts = [strategy: :one_for_one, name: sup_via(game)]
-    args = %{
-      id: __MODULE__,
-      start: {Supervisor, :start_link, [children, opts]}
-    }
-    DynamicSupervisor.start_child(@game_supervisor, args)
   end
 
   def exists?(game) do
@@ -96,12 +77,7 @@ defmodule FourCardsGame.Game do
   end
 
   def stop(game) do
-    case Registry.lookup(@game_sup_registry, game) do
-      [{pid, nil}] ->
-        DynamicSupervisor.terminate_child(@game_supervisor, pid)
-
-      [] -> {:error, :notfound}
-    end
+    GenStateMachine.stop(via(game))
   end
 
   @impl GenStateMachine
@@ -272,13 +248,10 @@ defmodule FourCardsGame.Game do
   def playing(
         {:call, from},
         {:play_from, from_num},
-        %Game{players: [player | _players], playing_card: playing_card} = game
+        %Game{players: [player | _players], playing_card: old_playing_card} = game
       ) do
-    {playing_card, player} =
-      player
-      |> Player.add_hand_card(playing_card)
-      |> Player.get_hand_card(from_num - 1)
-
+    {playing_card, player} = Player.get_hand_card(player, from_num - 1)
+    player = Player.add_hand_card(player, old_playing_card)
     players = Player.update(game.players, player)
     game = %Game{game | players: players, playing_card: playing_card, matching: 0}
     {:keep_state, game, [{:reply, from, :ok}]}
@@ -467,8 +440,17 @@ defmodule FourCardsGame.Game do
     {:keep_state_and_data, [{:reply, from, length(deck)}]}
   end
 
-  def ended({:call, from}, :get_shown, %Game{shown: cards_shown}) do
-    {:keep_state_and_data, [{:reply, from, cards_shown}]}
+  def ended({:call, from}, :get_shown, %Game{shown: cards}) do
+    {:keep_state_and_data, [{:reply, from, show_cards(cards)}]}
+  end
+
+  def ended({:call, from}, :get_captured, %Game{players: players}) do
+    cards = Player.get_captured(players)
+    {:keep_state_and_data, [{:reply, from, cards}]}
+  end
+
+  def ended({:call, from}, :playing_card, game) do
+    {:keep_state_and_data, [{:reply, from, game.playing_card}]}
   end
 
   def ended({:call, from}, :is_my_turn?, _game) do

@@ -4,7 +4,6 @@ defmodule FourCardsConsole do
   """
   use GenStage
 
-  alias FourCardsGame.{Game, EventManager}
   alias IO.ANSI
 
   defp ask(prompt) do
@@ -24,9 +23,9 @@ defmodule FourCardsConsole do
   end
 
   def start(name \\ __MODULE__) do
-    Game.start(name)
+    FourCardsGame.start(name)
     user = ask("name")
-    pid = EventManager.get_pid(name)
+    pid = FourCardsGame.get_event_manager_pid(name)
     GenStage.start_link(__MODULE__, [pid, self()])
     waiting(name, user)
   end
@@ -54,33 +53,33 @@ defmodule FourCardsConsole do
   end
 
   def waiting(name, user) do
-    Game.join(name, user)
-    IO.puts("Note that 'deal' should be made when everyone is onboarding.")
+    FourCardsGame.join(name, user)
+    IO.puts("Note that 'deal' should be made when everyone is onboarding FourCardsGame..")
 
     case ask("deal? [Y/n]") do
       "n" ->
         waiting(name, user)
 
       _ ->
-        Game.deal(name)
+        FourCardsGame.deal(name)
         playing(name, user)
     end
   end
 
   def playing(name \\ __MODULE__, user) do
-    if Game.is_game_over?(name) do
+    if FourCardsGame.is_game_over?(name) do
       IO.puts("GAME OVER!")
     else
-      cards = Game.get_shown(name)
+      cards = FourCardsGame.get_shown(name)
       IO.puts([ANSI.reset(), ANSI.clear()])
       IO.puts("Four Cards - #{vsn()}")
       IO.puts("--------------------")
-      draw_players(Game.players(name))
-      IO.puts(["\nShown -->", "\nIn deck: #{Game.deck_cards_num(name)}\n"])
+      draw_players(FourCardsGame.players(name))
+      IO.puts(["\nShown -->", "\nIn deck: #{FourCardsGame.deck_cards_num(name)}\n"])
       draw_cards(cards)
       IO.puts("Captured -->")
-      draw_cards(Game.get_captured(name))
-      playing_card = Game.playing_card?(name)
+      draw_cards(FourCardsGame.get_captured(name))
+      playing_card = FourCardsGame.playing_card?(name)
 
       if playing_card != nil and playing_card != {:error, :not_your_turn} do
         IO.puts("Playing card -->")
@@ -88,10 +87,10 @@ defmodule FourCardsConsole do
       end
 
       IO.puts("Your hand -->")
-      cards = Game.get_hand(name)
+      cards = FourCardsGame.get_hand(name)
       draw_cards(cards)
 
-      if Game.is_my_turn?(name) do
+      if FourCardsGame.is_my_turn?(name) do
         choose_option(name, user, cards)
       else
         IO.puts("waiting for your turn...")
@@ -101,16 +100,16 @@ defmodule FourCardsConsole do
   end
 
   def capturing(name, user) do
-    shown_cards = Game.get_shown(name)
+    shown_cards = FourCardsGame.get_shown(name)
     IO.puts([ANSI.reset(), ANSI.clear()])
     IO.puts("Four Cards - #{vsn()}")
     IO.puts("--------------------")
-    draw_players(Game.players(name))
-    IO.puts(["\nShown -->", "\nIn deck: #{Game.deck_cards_num(name)}\n"])
+    draw_players(FourCardsGame.players(name))
+    IO.puts(["\nShown -->", "\nIn deck: #{FourCardsGame.deck_cards_num(name)}\n"])
     draw_cards(shown_cards)
     IO.puts("Captured -->")
-    draw_cards(Game.get_captured(name))
-    playing_card = Game.playing_card?(name)
+    draw_cards(FourCardsGame.get_captured(name))
+    playing_card = FourCardsGame.playing_card?(name)
 
     if playing_card do
       IO.puts("Playing card -->")
@@ -124,7 +123,7 @@ defmodule FourCardsConsole do
     case ask("[C]hoose [Q]uit") do
       "c" ->
         num = ask_num("card")
-        Game.play_from(name, num)
+        FourCardsGame.play_from(name, num)
         capturing(name, user)
 
       "q" ->
@@ -138,17 +137,17 @@ defmodule FourCardsConsole do
   defp choose_capture_option(name, user, cards) do
     case ask("[D]rop [C]hoose [T]heft [B]ack") do
       "d" ->
-        Game.pass(name)
+        FourCardsGame.pass(name)
         playing(name, user)
 
       "c" ->
         num = ask_num("card")
-        Game.play_to(name, :shown, num)
+        FourCardsGame.play_to(name, :shown, num)
         capturing(name, user)
 
       "t" ->
         from_name = ask("card")
-        Game.play_to(name, :player, from_name)
+        FourCardsGame.play_to(name, :player, from_name)
         capturing(name, user)
 
       "b" ->
@@ -174,7 +173,7 @@ defmodule FourCardsConsole do
   end
 
   def vsn do
-    to_string(Application.spec(:four_cards)[:vsn])
+    to_string(Application.spec(:four_cards_game)[:vsn])
   end
 
   defp to_kind(:copa), do: [ANSI.red_background(), ANSI.black()]

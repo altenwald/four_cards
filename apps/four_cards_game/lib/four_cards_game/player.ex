@@ -25,7 +25,7 @@ defmodule FourCardsGame.Player do
     {name, length(captured_cards)}
   end
 
-  def info([%Player{} | _] = players) do
+  def info(players) when is_list(players) do
     for player <- players, do: info(player)
   end
 
