@@ -25,6 +25,7 @@ defmodule FourCardsConsole.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
+      {:four_cards_game, in_umbrella: true},
       {:gen_stage, "~> 1.0"}
     ]
   end

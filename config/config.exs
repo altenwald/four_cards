@@ -1,3 +1,3 @@
 use Mix.Config
 
-config :four_cards_web, port: 4015
+config :four_cards_web, port: 4016
