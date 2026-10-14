@@ -15,11 +15,7 @@ defmodule FourCardsWeb.Application do
     port_number = Application.get_env(:four_cards_web, :port, @port)
 
     children = [
-      Plug.Cowboy.child_spec(
-        scheme: :http,
-        plug: FourCardsWeb.Router,
-        options: [port: port_number, dispatch: dispatch()]
-      ),
+      {Bandit, plug: FourCardsWeb.Router, scheme: :http, port: port_number},
       {DynamicSupervisor, strategy: :one_for_one, name: @consumer_sup}
     ]
 
@@ -37,17 +33,5 @@ defmodule FourCardsWeb.Application do
 
   def vsn do
     to_string(Application.spec(:four_cards_web)[:vsn])
-  end
-
-  defp dispatch do
-    [
-      {:_,
-        [
-          {"/websession", FourCardsWeb.Websocket, []},
-          {"/kiosksession", FourCardsWeb.Kiosk.Websocket, []},
-          {:_, Plug.Cowboy.Handler, {FourCardsWeb.Router, []}}
-        ]
-      }
-    ]
   end
 end

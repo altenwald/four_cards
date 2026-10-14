@@ -9,7 +9,7 @@ defmodule FourCardsGame.Application do
       {Registry, keys: :unique, name: FourCardsGame.Game.Registry},
       {Registry, keys: :unique, name: FourCardsGame.EventManager.Registry},
       {Registry, keys: :unique, name: FourCardsGame.Supervisor.Registry},
-      {DynamicSupervisor, strategy: :one_for_one, name: FourCardsGame.Games},
+      {DynamicSupervisor, strategy: :one_for_one, name: FourCardsGame.Games}
     ]
 
     Logger.info("[app] initiated application")

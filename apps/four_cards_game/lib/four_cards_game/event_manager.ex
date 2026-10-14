@@ -1,4 +1,9 @@
 defmodule FourCardsGame.EventManager do
+  @moduledoc """
+  The producer of the events of a game (a player joined, it is somebody's turn...). The
+  interfaces subscribe to it to show what happens.
+  """
+
   use GenStage
 
   @registry FourCardsGame.EventManager.Registry

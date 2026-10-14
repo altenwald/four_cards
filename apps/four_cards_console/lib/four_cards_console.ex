@@ -14,12 +14,11 @@ defmodule FourCardsConsole do
   end
 
   defp ask_num(prompt) do
-    try do
-      ask(prompt)
-      |> String.to_integer()
-    rescue
-      _ in ArgumentError -> ask_num(prompt)
-    end
+    prompt
+    |> ask()
+    |> String.to_integer()
+  rescue
+    _ in ArgumentError -> ask_num(prompt)
   end
 
   def start(name \\ __MODULE__) do
@@ -67,7 +66,7 @@ defmodule FourCardsConsole do
   end
 
   def playing(name \\ __MODULE__, user) do
-    if FourCardsGame.is_game_over?(name) do
+    if FourCardsGame.game_over?(name) do
       IO.puts("GAME OVER!")
     else
       cards = FourCardsGame.get_shown(name)
@@ -90,7 +89,7 @@ defmodule FourCardsConsole do
       cards = FourCardsGame.get_hand(name)
       draw_cards(cards)
 
-      if FourCardsGame.is_my_turn?(name) do
+      if FourCardsGame.my_turn?(name) do
         choose_option(name, user, cards)
       else
         IO.puts("waiting for your turn...")

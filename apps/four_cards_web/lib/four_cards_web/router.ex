@@ -1,4 +1,9 @@
 defmodule FourCardsWeb.Router do
+  @moduledoc """
+  The router is responsible for the routes implementation. It's defining
+  the possible URIs available for the HTTP server and the upgrade of the
+  player's connection to a WebSocket.
+  """
   use Plug.Router
 
   plug(Plug.Logger, log: :debug)
@@ -13,19 +18,26 @@ defmodule FourCardsWeb.Router do
   plug(:match)
   plug(:dispatch)
 
+  get "/websession" do
+    conn
+    |> WebSockAdapter.upgrade(
+      FourCardsWeb.Websocket,
+      [remote_ip: FourCardsWeb.Request.remote_ip(conn)],
+      timeout: 60_000
+    )
+    |> halt()
+  end
+
   get "/" do
-    priv_dir = :code.priv_dir(:four_cards_web)
-    send_file(conn, 200, "#{priv_dir}/static/index.html")
+    page(conn, "index.html")
   end
 
   get "/kiosk" do
-    priv_dir = :code.priv_dir(:four_cards_web)
-    send_file(conn, 200, "#{priv_dir}/static/kiosk.html")
+    page(conn, "kiosk.html")
   end
 
   get "/kiosk/:id" do
-    priv_dir = :code.priv_dir(:four_cards_web)
-    send_file(conn, 200, "#{priv_dir}/static/kiosk.html")
+    page(conn, "kiosk.html")
   end
 
   get "/qr/:id" do
@@ -48,11 +60,16 @@ defmodule FourCardsWeb.Router do
   end
 
   get "/:id" do
-    priv_dir = :code.priv_dir(:four_cards_web)
-    send_file(conn, 200, "#{priv_dir}/static/index.html")
+    page(conn, "index.html")
   end
 
   match _ do
     send_resp(conn, 404, "oops")
+  end
+
+  defp page(conn, file) do
+    conn
+    |> put_resp_content_type("text/html")
+    |> send_file(200, Path.join([:code.priv_dir(:four_cards_web), "static", file]))
   end
 end

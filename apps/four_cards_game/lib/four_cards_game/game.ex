@@ -1,4 +1,9 @@
 defmodule FourCardsGame.Game do
+  @moduledoc """
+  The state machine of one game: waiting for the players, playing, and ended. It owns the deck,
+  the cards on the table and the players, and notifies what happens through `FourCardsGame.EventManager`.
+  """
+
   use GenStateMachine, callback_mode: :state_functions, restart: :transient
 
   @card_kind ~w[ basto copa oro espada ]a
@@ -63,13 +68,13 @@ defmodule FourCardsGame.Game do
   def play_to(name, where, to_num), do: call(name, {:play_to, where, to_num})
   def pass(name), do: call(name, :pass)
 
-  def is_my_turn?(name), do: call(name, :is_my_turn?)
+  def my_turn?(name), do: call(name, :my_turn?)
   def players(name), do: call(name, :players)
   def whose_turn_is_it?(name), do: call(name, :whose_turn_is_it?)
   def deck_cards_num(name), do: call(name, :deck_cards_num)
   def restart(name), do: cast(name, :restart)
   def valid_name?(name, username), do: call(name, {:valid_name?, username})
-  def is_game_over?(name), do: call(name, :is_game_over?)
+  def game_over?(name), do: call(name, :game_over?)
 
   def get_pid(game) do
     [{pid, _}] = Registry.lookup(@game_registry, game)
@@ -99,16 +104,18 @@ defmodule FourCardsGame.Game do
   end
 
   def waiting_players(:cast, {:join, player_pid, player_name}, game) do
-    is_registered = Enum.any?(game.players, fn player ->
-      Player.has_name_or_pid(player, player_name, player_pid)
-    end)
+    is_registered =
+      Enum.any?(game.players, fn player ->
+        Player.has_name_or_pid(player, player_name, player_pid)
+      end)
+
     if is_registered do
       :keep_state_and_data
     else
       Process.monitor(player_pid)
       EventManager.notify(game.name, {:join, player_name})
       player = Player.new(player_name, player_pid)
-      {:keep_state, %Game{game | players: [player | game.players]}}
+      {:keep_state, %{game | players: [player | game.players]}}
     end
   end
 
@@ -122,7 +129,7 @@ defmodule FourCardsGame.Game do
     {:next_state, :playing, game, actions}
   end
 
-  def waiting_players({:call, from}, :is_game_over?, _game) do
+  def waiting_players({:call, from}, :game_over?, _game) do
     {:keep_state_and_data, [{:reply, from, false}]}
   end
 
@@ -146,7 +153,7 @@ defmodule FourCardsGame.Game do
       ) do
     player = Player.get_by_pid(players, player_pid)
     EventManager.notify(game.name, {:disconnected, player.name})
-    {:keep_state, %Game{game | players: players -- [player]}}
+    {:keep_state, %{game | players: players -- [player]}}
   end
 
   def waiting_players(:cast, :restart, _game) do
@@ -155,7 +162,7 @@ defmodule FourCardsGame.Game do
 
   ## State: playing
 
-  def playing({:call, from}, :is_game_over?, _game) do
+  def playing({:call, from}, :game_over?, _game) do
     {:keep_state_and_data, [{:reply, from, false}]}
   end
 
@@ -171,7 +178,7 @@ defmodule FourCardsGame.Game do
         players
       end
 
-    {:keep_state, %Game{game | players: players}}
+    {:keep_state, %{game | players: players}}
   end
 
   def playing(:cast, :deal, game) do
@@ -209,7 +216,7 @@ defmodule FourCardsGame.Game do
     {:keep_state_and_data, [{:reply, from, cards}]}
   end
 
-  def playing({:call, {from_pid, _} = from}, :is_my_turn?, %Game{players: [%Player{pid: pid} | _]}) do
+  def playing({:call, {from_pid, _} = from}, :my_turn?, %Game{players: [%Player{pid: pid} | _]}) do
     {:keep_state_and_data, [{:reply, from, from_pid == pid}]}
   end
 
@@ -253,7 +260,7 @@ defmodule FourCardsGame.Game do
     {playing_card, player} = Player.get_hand_card(player, from_num - 1)
     player = Player.add_hand_card(player, old_playing_card)
     players = Player.update(game.players, player)
-    game = %Game{game | players: players, playing_card: playing_card, matching: 0}
+    game = %{game | players: players, playing_card: playing_card, matching: 0}
     {:keep_state, game, [{:reply, from, :ok}]}
   end
 
@@ -308,7 +315,8 @@ defmodule FourCardsGame.Game do
     {_kind, number} = game.playing_card
     number = increase_number(matching, number)
 
-    with {:get_player, %Player{} = cplayer} <- {:get_player, Player.get_by_name(players, player_name)},
+    with {:get_player, %Player{} = cplayer} <-
+           {:get_player, Player.get_by_name(players, player_name)},
          {:ccards, [{_, ^number} = ccard | ccards]} <- {:ccards, Player.get_captured(cplayer)} do
       players =
         game.players
@@ -316,7 +324,7 @@ defmodule FourCardsGame.Game do
         |> Player.update(Player.reset_captured(cplayer))
 
       matching = matching + 1
-      game = %Game{game | players: players, matching: matching, playing_card: ccard}
+      game = %{game | players: players, matching: matching, playing_card: ccard}
       EventManager.notify(game.name, {:capture, player.name, :player, player_name, matching})
       {:keep_state, game, [{:reply, from, :ok}]}
     else
@@ -396,7 +404,7 @@ defmodule FourCardsGame.Game do
         players
       end
 
-    {:keep_state, %Game{game | players: players}}
+    {:keep_state, %{game | players: players}}
   end
 
   def playing(:cast, :restart, _game) do
@@ -405,7 +413,7 @@ defmodule FourCardsGame.Game do
 
   ## State: ended
 
-  def ended({:call, from}, :is_game_over?, _game) do
+  def ended({:call, from}, :game_over?, _game) do
     {:keep_state_and_data, [{:reply, from, true}]}
   end
 
@@ -453,7 +461,7 @@ defmodule FourCardsGame.Game do
     {:keep_state_and_data, [{:reply, from, game.playing_card}]}
   end
 
-  def ended({:call, from}, :is_my_turn?, _game) do
+  def ended({:call, from}, :my_turn?, _game) do
     {:keep_state_and_data, [{:reply, from, false}]}
   end
 
@@ -494,7 +502,7 @@ defmodule FourCardsGame.Game do
 
     players = Player.reset_hand_cards(game.players)
 
-    game = %Game{game | players: players}
+    game = %{game | players: players}
 
     give_card = fn _, %Game{players: [%Player{name: player_name} | _]} = game ->
       EventManager.notify(game.name, {:deal, player_name})
@@ -520,29 +528,29 @@ defmodule FourCardsGame.Game do
   defp game_ends?(_game), do: false
 
   defp next_player(%Game{players: [player | players]} = game) do
-    %Game{game | players: players ++ [player], matching: 0, playing_card: nil}
+    %{game | players: players ++ [player], matching: 0, playing_card: nil}
   end
 
   defp pick_card(%Game{deck: []} = game), do: game
 
   defp pick_card(%Game{players: [player | players], deck: [new_card | deck]} = game) do
     player = Player.add_hand_card(player, new_card)
-    %Game{game | players: [player | players], deck: deck}
+    %{game | players: [player | players], deck: deck}
   end
 
   defp shown_cards(game) do
     {shown, deck} = Enum.split(game.deck, @initial_cards)
-    %Game{game | shown: shown, deck: deck}
+    %{game | shown: shown, deck: deck}
   end
 
   defp drop_card(game) do
-    %Game{game | shown: [game.playing_card | game.shown], playing_card: nil}
+    %{game | shown: [game.playing_card | game.shown], playing_card: nil}
   end
 
   defp capture_playing_card(%Game{players: [player | players]} = game) do
     ccards = player.captured_cards
-    player = %Player{player | captured_cards: [game.playing_card | ccards]}
-    %Game{game | players: [player | players], playing_card: nil}
+    player = %{player | captured_cards: [game.playing_card | ccards]}
+    %{game | players: [player | players], playing_card: nil}
   end
 
   defp shuffle_cards do

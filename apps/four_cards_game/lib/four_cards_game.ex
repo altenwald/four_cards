@@ -1,4 +1,8 @@
 defmodule FourCardsGame do
+  @moduledoc """
+  The public API of the game: starting a game, joining it and playing the cards. Every call is
+  delegated to the state machine of the game (`FourCardsGame.Game`).
+  """
 
   alias FourCardsGame.{EventManager, Game}
 
@@ -14,11 +18,14 @@ defmodule FourCardsGame do
       {Game, game},
       {EventManager, game}
     ]
+
     opts = [strategy: :one_for_one, name: via(game)]
+
     args = %{
       id: __MODULE__,
       start: {Supervisor, :start_link, [children, opts]}
     }
+
     DynamicSupervisor.start_child(@game_supervisor, args)
   end
 
@@ -43,13 +50,13 @@ defmodule FourCardsGame do
   defdelegate play_to(name, where, to_num), to: Game
   defdelegate pass(name), to: Game
 
-  defdelegate is_my_turn?(name), to: Game
+  defdelegate my_turn?(name), to: Game
   defdelegate players(name), to: Game
   defdelegate whose_turn_is_it?(name), to: Game
   defdelegate deck_cards_num(name), to: Game
   defdelegate restart(name), to: Game
   defdelegate valid_name?(name, username), to: Game
-  defdelegate is_game_over?(name), to: Game
+  defdelegate game_over?(name), to: Game
 
   defdelegate get_pid(game), to: Game
 end

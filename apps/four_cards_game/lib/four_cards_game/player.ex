@@ -1,12 +1,16 @@
 defmodule FourCardsGame.Player do
+  @moduledoc """
+  A player of a game: the process that represents it, its hand and the cards it captured.
+  """
+
   alias FourCardsGame.{Game, Player}
 
   @type t :: %__MODULE__{
-    pid: pid(),
-    name: String.t(),
-    hand_cards: Game.cards(),
-    captured_cards: Game.cards()
-  }
+          pid: pid(),
+          name: String.t(),
+          hand_cards: Game.cards(),
+          captured_cards: Game.cards()
+        }
 
   defstruct pid: nil,
             name: nil,
@@ -30,6 +34,7 @@ defmodule FourCardsGame.Player do
   end
 
   def valid_name?(_players, ""), do: false
+
   def valid_name?(players, username) do
     not Enum.any?(players, fn
       %Player{name: ^username} -> true
@@ -79,6 +84,7 @@ defmodule FourCardsGame.Player do
   end
 
   def add_hand_card(%Player{} = player, nil), do: player
+
   def add_hand_card(%Player{hand_cards: hand_cards} = player, card) do
     %Player{player | hand_cards: [card | hand_cards]}
   end
@@ -96,9 +102,11 @@ defmodule FourCardsGame.Player do
   end
 
   def replace_pid(%Player{pid: pid} = player, pid), do: player
+
   def replace_pid(%Player{pid: nil} = player, pid) do
     %Player{player | pid: pid}
   end
+
   def replace_pid(%Player{pid: old_pid} = player, pid) do
     Process.exit(old_pid, :kicked)
     %Player{player | pid: pid}

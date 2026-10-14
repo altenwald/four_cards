@@ -4,12 +4,12 @@ defmodule FourCardsGame.MixProject do
   def project do
     [
       app: :four_cards_game,
-      version: "0.1.0",
+      version: "1.0.0",
       build_path: "../../_build",
       config_path: "../../config/config.exs",
       deps_path: "../../deps",
       lockfile: "../../mix.lock",
-      elixir: "~> 1.10",
+      elixir: "~> 1.20",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
@@ -26,8 +26,9 @@ defmodule FourCardsGame.MixProject do
   # Run "mix help deps" to learn about dependencies.
   defp deps do
     [
-      {:gen_state_machine, "~> 2.1"},
-      {:gen_stage, "~> 1.0"}
+      {:gen_state_machine, "~> 3.0"},
+      {:gen_stage, "~> 1.2"},
+      {:doctor, "~> 0.22", only: [:dev, :test], runtime: false}
     ]
   end
 end

@@ -1,7 +1,7 @@
 defmodule FourCardsWeb.MixProject do
   use Mix.Project
 
-  @version "0.1.0"
+  @version "1.0.0"
 
   def project do
     [
@@ -11,7 +11,7 @@ defmodule FourCardsWeb.MixProject do
       config_path: "../../config/config.exs",
       deps_path: "../../deps",
       lockfile: "../../mix.lock",
-      elixir: "~> 1.10",
+      elixir: "~> 1.20",
       start_permanent: Mix.env() == :prod,
       deps: deps()
     ]
@@ -29,11 +29,15 @@ defmodule FourCardsWeb.MixProject do
   defp deps do
     [
       {:four_cards_game, in_umbrella: true},
-      {:gen_stage, "~> 1.0"},
-      {:uuid, "~> 1.1"},
-      {:jason, "~> 1.2"},
-      {:plug_cowboy, "~> 2.3"},
-      {:eqrcode, "~> 0.1"}
+      {:gen_stage, "~> 1.2"},
+      {:elixir_uuid, "~> 1.2"},
+      {:jason, "~> 1.4"},
+      {:plug, "~> 1.18"},
+      {:bandit, "~> 1.8"},
+      {:websock_adapter, "~> 0.5"},
+      {:eqrcode, "~> 0.2"},
+      {:websockex, "~> 0.5", only: :test},
+      {:doctor, "~> 0.22", only: [:dev, :test], runtime: false}
     ]
   end
 end

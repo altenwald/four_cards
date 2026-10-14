@@ -1,4 +1,9 @@
 defmodule FourCardsWeb.Consumer do
+  @moduledoc """
+  Consumer for the WebSocket. This is in charge of consuming events from the event manager and
+  sending them back to the websocket.
+  """
+
   use GenStage, restart: :transient
 
   require Logger
